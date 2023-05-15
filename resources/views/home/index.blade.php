@@ -1,0 +1,16 @@
+@extends('layouts.rh')
+
+@section('content')
+    @include('home.sections.top')
+    @include('home.sections.products')
+    @include('home.sections.separator_image_1')
+    @include('home.sections.collection')
+    @include('home.sections.separator_image_2')
+    @include('home.sections.warranty')
+    @include('home.sections.satisfaction')
+    @include('home.sections.contact')
+    @include('home.sections.rule')
+    @include('home.sections.separator_image_3')
+    @include('home.sections.partners')
+    @include('home.sections.modal')
+@endsection

@@ -1,0 +1,147 @@
+.modal {
+    .modal-content {
+        border: none;
+        border-radius: 0;
+        color: $bg-dark;
+    }
+
+    .modal-header {
+        padding: 0;
+        border: none;
+
+        .modal-title {
+            padding: 50px 30px 0px 30px;
+            font-family: $font-title;
+            line-height: 30px;
+            letter-spacing: 1px;
+            text-transform: none;
+            width: 100%;
+        }
+
+        .modal-toggler {
+            position: relative;
+            background-color: $white;
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            border: none;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                background-color: $bg-dark;
+                width: 18px;
+                height: 2px;
+                transition: transform 0.25s;
+            }
+
+            &::before {
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+
+            &::after {
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+
+            &:hover,
+            &:focus-visible {
+                background-color: $red;
+
+                &::before,
+                &::after {
+                    background-color: $white;
+                }
+
+                &::before {
+                    transform: translate(-50%, -50%) rotate(135deg);
+                }
+
+                &::after {
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+            }
+        }
+    }
+
+    .modal-body {
+        padding: 30px;
+
+        p {
+            margin-bottom: 0;
+        }
+
+        .logos {
+            > div {
+                margin-bottom: 30px;
+            }
+
+            .logo {
+                background-color: $white;
+                background-repeat: no-repeat;
+                background-position: center center;
+                height: 160px;
+                display: block;
+                position: relative;
+
+                &[href*="mediamarkt.pl"] {
+                    background-position: center 0px;
+                }
+
+                &[href*="mediaexpert.pl"] {
+                    background-position: center -160px;
+                }
+
+                &[href*="euro.com.pl"] {
+                    background-position: center -320px;
+                }
+
+                &[href*="neonet.pl"] {
+                    background-position: center -480px;
+                }
+
+                &[href*="morele.net"] {
+                    background-position: center -800px;
+                }
+
+                &[href*="mycenter.pl"] {
+                    background-position: center -960px;
+                }
+
+                &[href*="al.to"] {
+                    background-position: center -1120px;
+                }
+
+                &[href*="amazon.pl"] {
+                    background-position: center -1280px;
+                }
+            }
+        }
+    }
+}
+
+.webp {
+    .modal {
+        .modal-body {
+            .logos {
+                .logo {
+                    background-image: url(/images/home/logos_new_2.png.webp);
+                }
+            }
+        }
+    }
+}
+
+.no-webp {
+    .modal {
+        .modal-body {
+            .logos {
+                .logo {
+                    background-image: url(/images/home/logos_new_2.png);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+.home-rule {
+    position: relative;
+    padding: calc(0.105104 * (100vw / 2)) 0;
+
+    .container {
+        background-repeat: no-repeat;
+        background-size: 60%;
+        background-position: right center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        @media #{$min-lg} {
+        }
+    }
+
+    h2 {
+        margin-bottom: 50px;
+    }
+
+    h3 {
+        margin-bottom: 50px;
+    }
+
+    .button {
+        margin-bottom: 50px;
+    }
+
+    p {
+        margin-bottom: 25px;
+    }
+}
+
+.webp {
+    .home-rule {
+        .container {
+            @media #{$min-lg} {
+                background-image: url(/images/home/rule.png.webp);
+            }
+        }
+    }
+}
+
+.no-webp {
+    .home-rule {
+        .container {
+            @media #{$min-lg} {
+                background-image: url(/images/home/rule.png);
+            }
+        }
+    }
+}

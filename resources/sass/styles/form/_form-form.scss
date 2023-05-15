@@ -1,0 +1,218 @@
+.form-form {
+    padding: 50px 0;
+
+    @media #{$min-sm} {
+    }
+
+    @media #{$min-lg} {
+    }
+
+    .col-12 {
+        position: relative;
+    }
+
+    .headline1 {
+        margin-bottom: 60px;
+    }
+
+    .placeholder {
+        position: absolute;
+        top: 17px;
+        left: 30px;
+        background-color: $bg-dark;
+        max-width: calc(100% - 30px);
+        padding: 0 5px;
+        color: transparentize($white, 0.6);
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        transition: transform 0.25s;
+        transform-origin: 0 0;
+        pointer-events: none;
+        font-size: 16px;
+    }
+
+    .input,
+    .textarea {
+        background-color: $transparent;
+        display: block;
+        width: 100%;
+        height: 56px;
+        padding: 15px;
+        margin-bottom: 32px;
+        border: 1px solid $border;
+        color: $white;
+        font-size: 16px;
+        line-height: 24px;
+
+        &.invalid {
+            border: 3px solid $red;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &:focus-visible {
+            border: 3px solid $border;
+        }
+
+        &:not(.select):focus-visible,
+        &.valid,
+        &.select:not(.empty) {
+            + .placeholder {
+                color: $white;
+                transform: scale(0.8) translateY(-30px);
+                opacity: 1;
+            }
+        }
+
+        /*
+        &:not(.select):focus-visible,
+        &.valid,
+        &.select:not(.empty) {
+            + .placeholder {
+                color: $black;
+                transform: scale(0.8) translateY(-30px);
+            }
+        }
+        */
+
+        &::placeholder {
+            color: transparentize($white, 0.6);
+        }
+
+        &.select {
+            appearance: none;
+            background: no-repeat right 23px center / auto;
+            background-image: url("/images/svg/form/select.svg"),
+                linear-gradient(
+                    90deg,
+                    $transparent calc(100% - 34px),
+                    $border calc(100% - 34px),
+                    $border calc(100% - 33px),
+                    $transparent calc(100% - 33px)
+                );
+            padding-right: 57px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+            > option {
+                color: $black;
+            }
+
+            + .placeholder {
+                max-width: calc(100% - 86px);
+            }
+        }
+    }
+
+    .textarea {
+        min-height: 200px;
+    }
+
+    .error {
+        position: absolute;
+        bottom: 0;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        color: $red;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px;
+
+        &:not(:empty)::before {
+            content: "";
+            background: no-repeat center / auto
+                url("/images/svg/form/error.svg");
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            margin-right: 5px;
+        }
+    }
+
+    .file-thumb {
+        background: no-repeat center / contain;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+        padding: 0 15px;
+        margin-bottom: 32px;
+        border: 1px solid $border;
+        overflow: hidden;
+
+        .file-text {
+            margin-top: 20px;
+            margin-bottom: 0;
+            color: transparentize($white, 0.6);
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+        }
+    }
+
+    .file-uploads {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: calc(100% - 32px);
+        margin-bottom: 32px;
+
+        @media #{$min-md} {
+            align-items: flex-start;
+        }
+
+        .ajax-file-upload-statusbar {
+            display: none;
+        }
+    }
+
+    .label {
+        display: flex;
+        margin-bottom: 32px;
+        cursor: pointer;
+
+        .checkbox {
+            appearance: none;
+            width: 30px;
+            height: 30px;
+            border: 1px solid $border;
+
+            &.invalid {
+                border: 3px solid $red;
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            &:focus-visible {
+                border: 3px solid $black;
+            }
+
+            &:checked {
+                background: no-repeat center / auto
+                    url("/images/svg/form/check.svg");
+            }
+        }
+
+        .checkbox-text {
+            width: 100%;
+            margin-left: 15px;
+            color: $white;
+            font-size: 13px;
+            line-height: 22px;
+            letter-spacing: 1px;
+        }
+    }
+
+    .button {
+        margin: 40px 0;
+    }
+}

@@ -1,0 +1,30 @@
+.home-top {
+    position: relative;
+
+    img {
+        width: 100%; /* or max-width: 100%; */
+        height: auto;
+    }
+
+    .owl-prev,
+    .owl-next {
+        position: absolute;
+        top: 50%;
+        z-index: 1;
+
+        svg {
+            width: 24px;
+            height: 50px;
+        }
+    }
+
+    .owl-prev {
+        left: 4vw;
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    .owl-next {
+        right: 4vw;
+        transform: translateY(-50%);
+    }
+}

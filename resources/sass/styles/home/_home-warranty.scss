@@ -1,0 +1,76 @@
+.home-warranty {
+    position: relative;
+    /*padding: calc(0.105104 * (100vw / 2)) 0;*/
+    /*padding-bottom: 0;*/
+    -webkit-transform: skewY(-6deg);
+    transform: skewY(-6deg);
+
+    .container {
+        background-repeat: no-repeat;
+        background-size: 60%;
+        background-position: right -140px center;
+        -webkit-transform: skewY(6deg);
+        transform: skewY(6deg);
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        @media #{$min-lg} {
+        }
+
+        @media #{$min-sm} {
+            padding-top: 120px;
+            padding-bottom: 120px;
+        }
+
+        @media #{$min-md} {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        @media #{$min-lg} {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        @media #{$min-xl} {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+
+    h2 {
+        margin-bottom: 50px;
+    }
+
+    h3 {
+        margin-bottom: 30px;
+    }
+
+    .button {
+        margin-bottom: 50px;
+    }
+
+    p {
+        margin-bottom: 25px;
+    }
+}
+
+.webp {
+    .home-warranty {
+        .container {
+            @media #{$min-lg} {
+                background-image: url(/images/home/warranty.png.webp);
+            }
+        }
+    }
+}
+
+.no-webp {
+    .home-warranty {
+        .container {
+            @media #{$min-lg} {
+                background-image: url(/images/home/warranty.png);
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.thankyou-info {
+    padding: 50px 0 80px 0;
+
+    @media #{$min-sm} {
+        padding: 50px 0 95px;
+    }
+
+    @media #{$min-lg} {
+        padding: 70px 0 110px;
+    }
+
+    .info {
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 1px;
+    }
+
+    h1 {
+        margin-bottom: 60px;
+    }
+
+    h2 {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+}

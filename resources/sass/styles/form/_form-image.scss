@@ -1,0 +1,34 @@
+.form-image {
+    background-color: $white;
+    overflow: hidden;
+    transform: skewY(-6deg);
+    transition: all 0.25s;
+
+    .container-fluid {
+        transform: skewY(6deg);
+        width: 100%;
+        height: 125vw;
+        margin-top: -6vw;
+        margin-bottom: -6vw;
+        background-position: top center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+}
+
+.webp {
+    .form-image {
+        .container-fluid {
+            background-image: url(/images/form/form.jpg.webp);
+        }
+    }
+}
+
+.no-webp {
+    .form-image {
+        .container-fluid {
+            background-image: url(/images/form/form.jpg);
+        }
+    }
+}

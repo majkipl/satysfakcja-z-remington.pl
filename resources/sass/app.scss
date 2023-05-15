@@ -1,0 +1,39 @@
+// Fonts
+//@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+@import "styles/font";
+@import "styles/variables";
+@import "styles/root";
+
+@import "styles/header";
+@import "styles/footer";
+
+@import "styles/home/home-top";
+@import "styles/home/home-products";
+@import "styles/home/home-contact";
+@import "styles/home/home-image";
+@import "styles/home/home-warranty";
+@import "styles/home/home-satisfaction";
+@import "styles/home/home-rule";
+@import "styles/home/home-partners";
+@import "styles/home/home-collection";
+
+@import "styles/form/form-form";
+@import "styles/form/form-image";
+
+@import "styles/thankyou/thankyou-info";
+
+@import "styles/error/error-info";
+
+@import "styles/products/products";
+@import "styles/products/manchester";
+
+@import "styles/warranty/warranty";
+
+@import "styles/modal/modal";

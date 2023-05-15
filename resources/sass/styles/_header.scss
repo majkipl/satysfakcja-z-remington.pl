@@ -1,0 +1,95 @@
+.header {
+    top: 0;
+    z-index: 9;
+
+    .navbar {
+        background-color: $bg-dark;
+        padding: 15px 20px;
+        border-bottom: 1px solid $border-dark;
+    }
+
+    .logo {
+        width: 70%;
+        padding: 2px 3px;
+        margin: 0 10px;
+
+        @media #{$min-sm} {
+            width: 300px;
+        }
+    }
+
+    .navbar-toggler {
+        width: 46px;
+        height: 46px;
+        padding: 0;
+        border: none;
+
+        .toggler-icon {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $white;
+            width: 35px;
+            height: 4px;
+            border-radius: 2px;
+            transition: transform 0.25s;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                background-color: $white;
+                width: 35px;
+                height: 4px;
+                border-radius: 2px;
+                transition: transform 0.25s;
+            }
+
+            &::before {
+                top: -10px;
+            }
+
+            &::after {
+                top: 10px;
+            }
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        &[aria-expanded="true"] {
+            .toggler-icon {
+                transform: translate(-50%, -50%) rotate(-45deg);
+
+                &::before {
+                    transform: translateY(10px) rotate(90deg);
+                }
+
+                &::after {
+                    transform: translateY(-10px) rotate(90deg);
+                }
+            }
+        }
+    }
+
+    #navbar {
+        margin-top: 17px;
+
+        @media #{$min-lg} {
+            margin-top: 0;
+        }
+
+        .nav-link {
+            padding: 10px;
+            color: $white;
+            font-size: 12px;
+            line-height: 1.1;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    }
+}

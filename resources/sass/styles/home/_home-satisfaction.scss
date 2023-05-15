@@ -1,0 +1,106 @@
+.home-satisfaction {
+    position: relative;
+    -webkit-transform: skewY(-6deg);
+    transform: skewY(-6deg);
+
+    .container {
+        -webkit-transform: skewY(6deg);
+        transform: skewY(6deg);
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        @media #{$min-sm} {
+            padding-top: 120px;
+            padding-bottom: 120px;
+        }
+
+        @media #{$min-md} {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        @media #{$min-lg} {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        @media #{$min-xl} {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+
+    h2 {
+        margin-bottom: 50px;
+    }
+
+    h3 {
+        margin-bottom: 25px;
+    }
+
+    .button {
+        margin-bottom: 50px;
+    }
+
+    p {
+        margin-bottom: 25px;
+    }
+
+    .image {
+        -webkit-transform: skewY(-6deg);
+        transform: skewY(-6deg);
+        margin: calc(0.105104 * (100% / 2)) 0;
+        width: 100%;
+        height: 60vw;
+
+        @media #{$min-md} {
+            height: 100%;
+        }
+
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: #db0f10;
+            top: 7px;
+            left: -7px;
+            position: absolute;
+        }
+
+        .image-container {
+            overflow: hidden;
+
+            .image-foto {
+                transform: skewY(6deg) scale(1.2);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                margin: 0;
+            }
+        }
+    }
+}
+
+.webp {
+    .home-satisfaction {
+        .image {
+            .image-container {
+                .image-foto {
+                    background-image: url(/images/home/satisfaction.jpg.webp);
+                }
+            }
+        }
+    }
+}
+
+.no-webp {
+    .home-satisfaction {
+        .image {
+            .image-container {
+                .image-foto {
+                    background-image: url(/static/pl/img/home/satisfaction.jpg);
+                }
+            }
+        }
+    }
+}
